@@ -8,7 +8,7 @@ def login(data):
   for user in data:
     if user[1] == username and user[3] == password:
       print(f'Halo {user[1]}! Selamat datang di "Binomo".')
-      isAdmin = user[4] == "admin"
+      isAdmin = user[4] == 'admin'
       return isAdmin, user[0]
   
   print("Password atau username salah atau tidak ditemukan.")
