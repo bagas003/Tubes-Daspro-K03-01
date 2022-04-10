@@ -4,7 +4,9 @@ def save(user,game,riwayat,kepemilikan):
         converted_data = ''
         for line in arr:
             for elmt in line:
-                converted_data += str(elmt) + ';'
+                converted_data += str(elmt)
+                if elmt != line[-1]:
+                    converted_data += ';'
             converted_data += '\n'
         return converted_data
 
