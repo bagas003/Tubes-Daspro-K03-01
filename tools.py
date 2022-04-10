@@ -16,9 +16,7 @@ def csv_to_array(dir):
             elif c != '\n': 
                 matrix_data[index_matrix][index_array] += c
         
-        if line != raw_data[-1]:
-            matrix_data += [['']]
-
+        if line != raw_data[-1]: matrix_data += [['']]
         index_matrix += 1
 
     return matrix_data
