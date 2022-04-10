@@ -5,14 +5,20 @@ def riwayat():
     # F.S. database riwayat pembelian game tercetak ke layar
 
     # KAMUS LOKAL
-
+    # input_user_id : int
+    # isHistEmpty : boolean
+    
     # ALGORITMA
-    if (len(history) == 1):
-        print("Maaf, kamu tidak ada riwayat pembelian game. Ketik perintah beli_game untuk membeli.")
-    else:
-        print("Daftar game:")
-        for i in range(1,len(history)):
+    input_user_id = int(input("Masukan user_id: "))
+
+    isHistEmpty = True
+    print("Daftar game:")
+    for i in range(1,len(history)):
+        if (history[i][3] == input_user_id):
+            isHistEmpty = False
             print('{:<6} | {:<29} | {:<7} | {:<6}'.format(history[i][0],history[i][1],history[i][2],history[i][4]))
+    if isHistEmpty:
+        print("Maaf, kamu tidak ada riwayat pembelian game. Ketik perintah beli_game untuk membeli.")
 
 # referensi : https://www.semicolonworld.com/question/44245/python-format-output-string-right-alignment?msclkid=0e4d8a87b89911ecb9c76c8b7a60bae6
 
