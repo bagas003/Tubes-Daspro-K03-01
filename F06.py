@@ -1,7 +1,7 @@
 # F06 - Mengubah Stok Game di Toko
-def ubahstok(game):
+def ubahstok(data_game):
     # Mengubah Stok Game di Toko
-    # I.S. pengguna sudah login dan matriks data file game terdefinisi
+    # I.S. pengguna sudah login dan matriks data file data_game terdefinisi
     # F.S. stok item pada database berubah
 
     # KAMUS LOKAL
@@ -26,8 +26,8 @@ def ubahstok(game):
     found = False
     IX = -999
     if input_id[:4] == 'GAME':
-        for i in range(1,len(game)):
-            if game[i][0] == input_id:
+        for i in range(1,len(data_game)):
+            if data_game[i][0] == input_id:
                 found = True
                 IX = i
                 break
@@ -36,11 +36,12 @@ def ubahstok(game):
         print ("Tidak ada game dengan ID tersebut!")
     else: # IX != -999
         # Validasi stok game setelah pengubahan (tidak negatif)
-        if ((game[IX][5] + input_jumlah) < 0):
-            print("Stok game",game[IX][1],"gagal dikurangi karena stok kurang. Stok sekarang:",game[IX][5],"(<",str(abs(input_jumlah)) + ")")
-        else: # (game[IX][5] + input_jumlah) >= 0
-            game[IX][5] = game[IX][5] + input_jumlah
+        if ((data_game[IX][5] + input_jumlah) < 0):
+            print("Stok game",data_game[IX][1],"gagal dikurangi karena stok kurang. Stok sekarang:",data_game[IX][5],"(<",str(abs(input_jumlah)) + ")")
+        else: # (data_game[IX][5] + input_jumlah) >= 0
+            data_game[IX][5] = data_game[IX][5] + input_jumlah
             if (input_jumlah < 0):
-                print ("Stok game",game[IX][1],"berhasil dikurangi. Stok sekarang:",game[IX][5])
+                print ("Stok game",data_game[IX][1],"berhasil dikurangi. Stok sekarang:",data_game[IX][5])
             elif (input_jumlah > 0):
-                print ("Stok game",game[IX][1],"berhasil ditambahkan. Stok sekarang:",game[IX][5])
+                print ("Stok game",data_game[IX][1],"berhasil ditambahkan. Stok sekarang:",data_game[IX][5])
+    return data_game
