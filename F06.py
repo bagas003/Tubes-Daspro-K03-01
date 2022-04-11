@@ -1,7 +1,7 @@
 # F06 - Mengubah Stok Game di Toko
 def ubahstok(data_game):
     # Mengubah Stok Game di Toko
-    # I.S. pengguna sudah login dan matriks data file data_game terdefinisi
+    # I.S. pengguna sudah login dan matriks data file game terdefinisi
     # F.S. stok item pada database berubah
 
     # KAMUS LOKAL
