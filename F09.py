@@ -1,7 +1,7 @@
 # F09 - Melihat Game yang dimiliki
 def listgame(data_game):
     # menampilkan daftar game yang dimiliki pengguna ke layar
-    # I.S. pengguna sudah login dan matriks data file data_game terdefinisi
+    # I.S. pengguna sudah login dan matriks data file game terdefinisi
     # F.S. database game tercetak ke layar
 
     # KAMUS LOKAL
