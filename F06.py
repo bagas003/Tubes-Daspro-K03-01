@@ -1,5 +1,5 @@
 # F06 - Mengubah Stok Game di Toko
-def ubahstok(data_game):
+def ubah_stok(data_game):
     # Mengubah Stok Game di Toko
     # I.S. pengguna sudah login dan matriks data file game terdefinisi
     # F.S. stok item pada database berubah
@@ -36,10 +36,10 @@ def ubahstok(data_game):
         print ("Tidak ada game dengan ID tersebut!")
     else: # IX != -999
         # Validasi stok game setelah pengubahan (tidak negatif)
-        if ((data_game[IX][5] + input_jumlah) < 0):
+        if ((int(data_game[IX][5]) + input_jumlah) < 0):
             print("Stok game",data_game[IX][1],"gagal dikurangi karena stok kurang. Stok sekarang:",data_game[IX][5],"(<",str(abs(input_jumlah)) + ")")
         else: # (data_game[IX][5] + input_jumlah) >= 0
-            data_game[IX][5] = data_game[IX][5] + input_jumlah
+            data_game[IX][5] = str(int(data_game[IX][5]) + input_jumlah)
             if (input_jumlah < 0):
                 print ("Stok game",data_game[IX][1],"berhasil dikurangi. Stok sekarang:",data_game[IX][5])
             elif (input_jumlah > 0):
