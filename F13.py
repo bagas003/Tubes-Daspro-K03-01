@@ -12,11 +12,13 @@ def riwayat(data_history):
     input_user_id = int(input("Masukan user_id: "))
 
     isHistEmpty = True
-    print("Daftar game:")
-    for i in range(1,len(data_history)):
-        if (data_history[i][3] == input_user_id):
+    for i in range(1,len(history)):
+        if (history[i][3] == input_user_id):
+            if isHistEmpty: # aksi ini pasti dilakukan 1x
+                print("Daftar game:") 
             isHistEmpty = False
-            print('{:<6} | {:<29} | {:<7} | {:<6}'.format(data_history[i][0],data_history[i][1],data_history[i][2],data_history[i][4]))
+            print('{:<6} | {:<29} | {:<7} | {:<6}'.format(history[i][0],history[i][1],history[i][2],history[i][4]))
+            
     if isHistEmpty:
         print("Maaf, kamu tidak ada riwayat pembelian game. Ketik perintah beli_game untuk membeli.")
     return data_history
