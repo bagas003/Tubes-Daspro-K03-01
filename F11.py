@@ -6,7 +6,7 @@ def search_game_at_store(data_game):
     array_input[2] = input('Masukkan Kategori Game: ')
     array_input[3] = input('Masukkan Tahun Rilis Game: ')
 
-    indeks = 1
+    indeks = 0
     for data in data_game:
         if data[0] != 'id':
             matched = True
@@ -14,5 +14,8 @@ def search_game_at_store(data_game):
                 if array_input[i] != '' and array_input[i] != data[i]:
                     matched = False
             if matched:
-                print(f'{indeks}. {data[0]:5s} | {data[1]:20s} | {data[4]:7s} | {data[2]:10s} | {data[3]:4s} | {data[5]:1s}')
                 indeks += 1
+                print(f'{indeks}. {data[0]:5s} | {data[1]:20s} | {data[4]:7s} | {data[2]:10s} | {data[3]:4s} | {data[5]:1s}')
+    
+    if indeks == 0:
+        print('Tidak ada game pada inventory-mu yang memenuhi kriteria')
