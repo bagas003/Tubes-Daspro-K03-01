@@ -11,7 +11,7 @@ def register(data_user):
             if line[1] == u: return True
         return False
 
-    id = data_user[-1][0] + 1
+    id = str(int(data_user[-1][0]) + 1)
     nama = input('\nnama: ')
     username = input('username: ')
     password = input('password: ')
