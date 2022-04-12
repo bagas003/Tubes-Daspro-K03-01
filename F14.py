@@ -1,5 +1,5 @@
-def help(role):
-    if role == 'admin': print('''
+def help(isAdmin):
+    if isAdmin: print('''
     ================================= HELP =================================
 1.  register             - Untuk melakukan registrasi user baru
 2.  login                - Untuk melakukan login ke dalam sistem
@@ -14,10 +14,10 @@ def help(role):
 11. exit                 - Untuk keluar dari aplikasi
     ''')
 
-    elif role == 'user': print('''
+    else: print('''
     ================================= HELP =================================
-1.  register             - Untuk melakukan registrasi user baru
-2.  login                - Untuk melakukan login ke dalam sistem
+1.  login                - Untuk melakukan login ke dalam sistem
+2.  list_game_toko       - Untuk melihat list game yang dijual pada toko
 3.  buy_game             - Untuk membeli game yang ada pada toko
 4.  list_game            - Untuk melihat list game yang dimiliki pengguna
 5.  search_my_game       - Untuk mencari dan mendapatkan informasi game yang dimiliki pengguna
