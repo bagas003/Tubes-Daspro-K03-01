@@ -38,7 +38,7 @@ def list_game_toko(data):
     
     i = 1
     for game in data_terurut:
-      print(f"{i}. {game[0]:5s} | {game[1]:20s} | {game[4]:7d} | {game[2]:10s} | {game[3]:4d} | {game[5]:1d}")
+      print(f"{i}. {game[0]:5s} | {game[1]:20s} | {game[4]:7s} | {game[2]:10s} | {game[3]:4s} | {game[5]:1s}")
       i += 1
   else:
     print("Skema sorting tidak valid!")
