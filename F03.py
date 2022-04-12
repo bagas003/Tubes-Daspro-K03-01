@@ -13,5 +13,5 @@ def login(data):
       return isAdmin, user[0]
   
   print("Password atau username salah atau tidak ditemukan.")
-  return login(data)
+  return login(data) # dibuat rekursi jadi kalo loginnya ga valid, bakal diulang-ulang terus sampe valid
 
