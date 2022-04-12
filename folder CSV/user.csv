@@ -1,0 +1,8 @@
+id;username;nama;password;role;saldo
+1;bagas012;bagas aryo seto;16521012;admin;1000
+2;fahia057;fahia ali anwari;16521057;admin;1000
+3;rava102;rava maulana azzikri;16521102;admin;1000
+4;albert192;albert;16521192;admin;1000
+5;dummy;dummy;pass123;user;100000
+6;kenz;indra;12345;user;0
+7;chan;farhan;09876;user;0
