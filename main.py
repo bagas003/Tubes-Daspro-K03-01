@@ -5,7 +5,6 @@ isAdmin = False
 # Lakukan load data secara otomatis
 data_user, data_game, data_riwayat, data_kepemilikan = F15.load()
 
-
 # Jika load berhasil dan data berhasil diterima maka input masukan perintah
 if data_user and data_game and data_riwayat and data_kepemilikan:
     # input perintah
@@ -77,5 +76,3 @@ if data_user and data_game and data_riwayat and data_kepemilikan:
         perintah = input('>>> ')
     
     if F17.exit(): F16.save(data_user, data_game, data_riwayat, data_kepemilikan)
-    
-            

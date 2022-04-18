@@ -1,4 +1,4 @@
-import argparse
+import argparse, B01
 from tools import csv_to_array
 
 def load():
@@ -18,6 +18,10 @@ def load():
       data_game = csv_to_array(rf"{args.nama_folder}\game.csv")
       data_riwayat = csv_to_array(rf"{args.nama_folder}\riwayat.csv")
       data_kepemilikan = csv_to_array(rf"{args.nama_folder}\kepemilikan.csv")
+
+      for i in range(1, len(data_user)):
+        data_user[i][3] = B01.encrypt(data_user[i][3], "daspro")
+
       return (data_user, data_game, data_riwayat, data_kepemilikan)
     except FileNotFoundError:
       print(f'Folder "{args.nama_folder}" tidak ditemukan.')
