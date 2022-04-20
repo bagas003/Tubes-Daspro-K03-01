@@ -1,4 +1,4 @@
-import argparse, B01
+import argparse
 from tools import csv_to_array
 
 def load():
