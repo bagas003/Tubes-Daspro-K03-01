@@ -7,10 +7,8 @@ def login(data):
   username = input("Masukan username: ")
   password = input("Masukan password: ")
 
-  password = B01.encrypt(password, "daspro")
-
   for user in data:
-    if user[1] == username and user[3] == password:
+    if user[1] == username and B01.decrypt(user[3], "daspro") == password:
       print(f'Halo {user[1]}! Selamat datang di "Binomo".')
       isAdmin = user[4] == 'admin'
       return isAdmin, user[0]
