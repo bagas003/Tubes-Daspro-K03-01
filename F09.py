@@ -12,12 +12,15 @@ def list_game(user_id, kepemilikan, game):
     
     # ALGORITMA
     Found = False
-    for i in range(1,len(kepemilikan)):
+    kepemilikan_user = []
+    for i in range(1, tools.panjang(kepemilikan)):
         if (user_id == kepemilikan[i][1]):
             if not Found: # Aksi ini pasti dilakukan 1x
-                print("Daftar game:")
+                print("\nDaftar game:")
             Found = True
-            print('{:<6} | {:<29} | {:<9} | {:<4} | {:<6}'.format(*game[tools.get_index(kepemilikan[i][0])]))
+            kepemilikan_user += [game[tools.get_index(kepemilikan[i][0])]]
+    
+    tools.print_data(kepemilikan_user)
             
     if not Found:
         print("Maaf, kamu belum membeli game. Ketik perintah beli_game untuk beli.")
