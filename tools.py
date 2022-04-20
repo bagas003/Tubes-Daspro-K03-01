@@ -21,34 +21,29 @@ def csv_to_array(dir):
 
     return matrix_data
 
-def print_data_game(array_data):
+def panjang(elmt):
+    ln = 0
+    for i in elmt:
+        ln += 1
+    return ln
 
-    def panjang(elmt):
-        ln = 0
-        for i in elmt:
-            ln += 1
-        return ln
+def print_data(array_data):
+    
+    maks_panjang = [0 for i in array_data[0]]
 
-    nama_maks = 0; ktgr_maks = 0; hrga_maks = 0
-
-    for line in array_data:
-        if line[0] != 'id':
-            n = panjang(line[1]); k = panjang(line[2]); h = panjang(line[4])
-            if n > nama_maks: nama_maks = n
-            if k > ktgr_maks: ktgr_maks = k
-            if h > hrga_maks: hrga_maks = h   
-
-    indeks = 1
-    for line in array_data:
-        if line[0] != 'id':
-            print(f'{indeks}. ', end='')
-            for i in range(5):
-                if i == 1:  print(line[i], ' '*(nama_maks-panjang(line[i])), '|  ', end='')
-                elif i == 2:  print(line[i], ' '*(ktgr_maks-panjang(line[i])), '|  ', end='')
-                elif i == 4:  print(line[i], ' '*(hrga_maks-panjang(line[i])), '|  ', end='')
-                else: print(line[i], ' |  ', end='')
-            print(line[5])
-            indeks += 1
+    for lines in array_data:
+        if lines[0] == 'id': continue
+        for i in range(panjang(lines)):
+            if panjang(lines[i]) > maks_panjang[i]: 
+                maks_panjang[i] = panjang(lines[i])
+    
+    for i in range(panjang(array_data)):
+        if array_data[i][0] == 'id': continue
+        print(f'{i+1}. ', end='')
+        for j in range(panjang(array_data[0])):
+            p = maks_panjang[j]
+            print(f'{array_data[i][j]}' + ' '*(maks_panjang[j] - panjang(array_data[i][j])) + ' | ', end='')
+        print()
 
 def array_to_string(arr):
     converted_data = ''
