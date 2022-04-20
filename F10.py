@@ -1,3 +1,5 @@
+import tools
+
 def _cari_data(x, key, matriks_data):
   # Menerima input x, key, dan matriks lalu menghasilkan matriks yang berisi data-data yang
   # sesuai dengan nilai x
@@ -36,10 +38,7 @@ def search_my_game(user_id, data_kepemilikan, data_game):
     data_hasil = _cari_data(id, 0, _cari_data(tahun, 3, data_game_user))
 
   print("Daftar game pada inventory yang memenuhi kriteria:")
-  if len(data_hasil) == 0:
+  if tools.panjang(data_hasil) == 0:
     print("Tidak ada game pada inventory-mu yang memenuhi kriteria")
   else:
-    i = 1
-    for game in data_hasil:
-      if game[0] != 'id': print(f"{i}. {game[0]:5s} | {game[1]:20s} | {game[4]:7s} | {game[2]:10s} | {game[3]:4s}")
-      i += 1
+    tools.print_data(data_hasil)

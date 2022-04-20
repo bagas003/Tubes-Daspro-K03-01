@@ -1,4 +1,7 @@
 # F13 - Melihat Riwayat Pembelian
+import tools
+
+
 def riwayat(user_id, history):                                             # user_id dijadikan sebagai parameter dan bukan sbg input
     # menampilkan daftar riwayat pembelian game 
     # I.S. pengguna sudah login dan matriks data file riwayat terdefinisi
@@ -10,12 +13,15 @@ def riwayat(user_id, history):                                             # use
     
     # ALGORITMA
     isHistEmpty = True
-    for i in range(1,len(history)):
+    user_history = []
+    for i in range(1, tools.panjang(history)):
         if (history[i][3] == user_id):
             if isHistEmpty: # aksi ini pasti dilakukan 1x
-                print("Daftar game:") 
+                print("\nDaftar game:") 
             isHistEmpty = False
-            print('{:<6} | {:<29} | {:<7} | {:<6}'.format(history[i][0],history[i][1],history[i][2],history[i][4]))
+            user_history += [history[i]]
             
     if isHistEmpty:
-        print("Maaf, kamu tidak ada riwayat pembelian game. Ketik perintah beli_game untuk membeli.")
+        print("\nMaaf, kamu tidak ada riwayat pembelian game. Ketik perintah beli_game untuk membeli.")
+    else:
+        tools.print_data(user_history)

@@ -12,6 +12,8 @@ def help(isAdmin):
 9.  help                 - Untuk memberikan panduan penggunaan sistem
 10. save                 - Untuk melakukan penyimpanan data ke dalam file setelah dilakukan perubahan
 11. exit                 - Untuk keluar dari aplikasi
+12. kerangajaib          - Untuk bermain kerang ajaib
+13. tictactoe            - Untuk bermain tictactoe
     ''')
 
     else: print('''
@@ -26,4 +28,14 @@ def help(isAdmin):
 8.  help                 - Untuk memberikan panduan penggunaan sistem
 9.  save                 - Untuk melakukan penyimpanan data ke dalam file setelah dilakukan perubahan
 10. exit                 - Untuk keluar dari aplikasi
+11. kerangajaib          - Untuk bermain kerang ajaib
+12. tictactoe            - Untuk bermain tictactoe
+    ''')
+
+def login_help():
+    print('''
+    ================== HELP ==================
+1. login    - Untuk melakukan login ke dalam sistem
+2. help     - Untuk memberikan panduan penggunaan sistem
+3. exit     - Untuk keluar dari aplikasi
     ''')
