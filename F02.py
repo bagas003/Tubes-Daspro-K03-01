@@ -14,18 +14,18 @@ def register(data_user):
         return False
 
     id = str(int(data_user[-1][0]) + 1)
-    nama = input('\nnama: ')
-    username = input('username: ')
-    password = input('password: ')
+    nama = input('Masukkan nama: ')
+    username = input('Masukkan username: ')
+    password = input('Masukkan password: ')
 
     if not username_valid(username):
-        print('Username', username, 'tidak valid.')
-        print('Username hanya dapat mengandung alfabet A-Z, a-z, underscore “_”, strip “-”, dan angka 0-9.')
+        print('\nUsername', username, 'tidak valid.')
+        print('\nUsername hanya dapat mengandung alfabet A-Z, a-z, underscore “_”, strip “-”, dan angka 0-9.')
     elif username_exist(username):
-        print('Username', username, 'sudah terpakai, silakan menggunakan username lain.')
+        print('\nUsername', username, 'sudah terpakai, silakan menggunakan username lain.')
     else:
         data_user += [[id, username, nama, B01.encrypt(password, "daspro"), 'user', 0]]
-        print('Username', username, 'telah berhasil register ke dalam “Binomo”.')
+        print('\nUsername', username, 'telah berhasil register ke dalam “Binomo”.')
     
     return data_user
 
