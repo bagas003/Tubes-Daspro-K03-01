@@ -45,7 +45,7 @@ def register(data_user):
     elif username_exist(username):
         print('\nUsername', username, 'sudah terpakai, silakan menggunakan username lain.')
     else:
-        data_user += [[id, username, nama, B01.encrypt(password), 'user', 0]]
+        data_user += [[id, username, nama, B01.encrypt(password, 'daspro'), 'user', 0]]
         print('\nUsername', username, 'telah berhasil register ke dalam “Binomo”.')
     
     # mengembalikan data_user yang sudah diupdate
