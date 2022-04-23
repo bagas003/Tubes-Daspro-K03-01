@@ -1,4 +1,6 @@
 # F12 - Top Up Saldo
+import tools
+
 def topup(data_user):
     # menambahkan saldo kepada user 
     # I.S. pengguna sudah login dan matriks data file user terdefinisi
@@ -15,7 +17,7 @@ def topup(data_user):
 
     # Validasi username
     isUsernameValid = False
-    for i in range(len(data_user)):
+    for i in range(tools.panjang(data_user)):
         if (data_user[i][1] == input_username):
             isUsernameValid = True
             break
