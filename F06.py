@@ -1,4 +1,6 @@
 # F06 - Mengubah Stok Game di Toko
+import tools
+
 def ubah_stok(data_game):
     # Mengubah Stok Game di Toko
     # I.S. pengguna sudah login dan matriks data file game terdefinisi
@@ -26,7 +28,7 @@ def ubah_stok(data_game):
     found = False
     IX = -999
     if input_id[:4] == 'GAME':
-        for i in range(1,len(data_game)):
+        for i in range(1,tools.panjang(data_game)):
             if data_game[i][0] == input_id:
                 found = True
                 IX = i
