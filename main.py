@@ -100,7 +100,7 @@ if data_user and data_game and data_riwayat and data_kepemilikan:
         
         elif perintah == 'topup':
             if isAdmin: 
-                F12.topup(data_user)
+                data_user = F12.topup(data_user)
             else: 
                 print('\nMaaf, anda tidak memiliki izin untuk menjalankan perintah berikut.')
         
