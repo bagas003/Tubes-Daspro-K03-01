@@ -18,7 +18,8 @@ def list_game(user_id, kepemilikan, game):
             if not Found: # Aksi ini pasti dilakukan 1x
                 print("\nDaftar game:")
             Found = True
-            kepemilikan_user += [game[tools.get_index(kepemilikan[i][0])]]
+            idx = tools.get_index(kepemilikan[i][0])
+            kepemilikan_user += [[game[idx[0],game[idx[1],game[idx[2],game[idx[3],game[idx[4]]]
     
     tools.print_data(kepemilikan_user)
             
