@@ -2,7 +2,7 @@
 import tools
 
 
-def riwayat(user_id, history):                                             # user_id dijadikan sebagai parameter dan bukan sbg input
+def riwayat(user_id, history):                                             
     # menampilkan daftar riwayat pembelian game 
     # I.S. pengguna sudah login dan matriks data file riwayat terdefinisi
     # F.S. database riwayat pembelian game tercetak ke layar
@@ -19,7 +19,7 @@ def riwayat(user_id, history):                                             # use
             if isHistEmpty: # aksi ini pasti dilakukan 1x
                 print("\nDaftar game:") 
             isHistEmpty = False
-            user_history += [history[i]]
+            user_history += [[history[i][0], history[i][1], history[i][2], history[i][4]]]
             
     if isHistEmpty:
         print("\nMaaf, kamu tidak ada riwayat pembelian game. Ketik perintah beli_game untuk membeli.")
