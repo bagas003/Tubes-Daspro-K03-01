@@ -24,4 +24,3 @@ def list_game(user_id, kepemilikan, game):
             
     if not Found:
         print("Maaf, kamu belum membeli game. Ketik perintah beli_game untuk beli.")
-# referensi : https://www.semicolonworld.com/question/44245/python-format-output-string-right-alignment?msclkid=0e4d8a87b89911ecb9c76c8b7a60bae6
