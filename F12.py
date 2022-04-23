@@ -22,9 +22,9 @@ def topup(data_user):
             isUsernameValid = True
             break
 
-    if isUsernameValid == False:
+    if not isUsernameValid:
         print("Username " + '"' + input_username + '"' + " tidak ditemukan")
-    else: #isUsernameValid = True
+    else: #isUsernameValid
         if ((int(data_user[i][5]) + input_saldo) < 0): 
             print("Masukan tidak valid.") 
         else: # (data_user[i][5] + input_saldo) >= 0
