@@ -7,7 +7,7 @@ def list_game(user_id, kepemilikan, game):
     # F.S. daftar game yang dimiliki user tercetak ke layar
 
     # KAMUS LOKAL
-    # input_user_id : int
+    # input_user_id,idx : int
     # Found : boolean
     
     # ALGORITMA
@@ -19,7 +19,7 @@ def list_game(user_id, kepemilikan, game):
                 print("\nDaftar game:")
             Found = True
             idx = tools.get_index(kepemilikan[i][0])
-            kepemilikan_user += [[game[idx[0],game[idx[1],game[idx[2],game[idx[3],game[idx[4]]]
+            kepemilikan_user += [[game[idx][0],game[idx][1],game[idx][2],game[idx][3],game[idx][4]]]
     
     tools.print_data(kepemilikan_user)
             
