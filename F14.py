@@ -1,5 +1,9 @@
+# F14 - Help
+
 def help(isAdmin):
-    if isAdmin: print('''
+    # menampilkan panduan perintah yang bisa diakses sesuai role
+    if isAdmin: 
+        print('''
     ================================= HELP =================================
 1.  register             - Untuk melakukan registrasi user baru
 2.  login                - Untuk melakukan login ke dalam sistem
@@ -14,9 +18,11 @@ def help(isAdmin):
 11. exit                 - Untuk keluar dari aplikasi
 12. kerangajaib          - Untuk bermain kerang ajaib
 13. tictactoe            - Untuk bermain tictactoe
+14. logout               - Untuk melakukan logout dari akun saat ini
     ''')
 
-    else: print('''
+    else: 
+        print('''
     ================================= HELP =================================
 1.  login                - Untuk melakukan login ke dalam sistem
 2.  list_game_toko       - Untuk melihat list game yang dijual pada toko
@@ -30,9 +36,11 @@ def help(isAdmin):
 10. exit                 - Untuk keluar dari aplikasi
 11. kerangajaib          - Untuk bermain kerang ajaib
 12. tictactoe            - Untuk bermain tictactoe
+13. logout               - Untuk melakukan logout dari akun saat ini
     ''')
 
 def login_help():
+    # menampilkan perintah yang bisa diakses jika belum login
     print('''
     ================== HELP ==================
 1. login    - Untuk melakukan login ke dalam sistem
