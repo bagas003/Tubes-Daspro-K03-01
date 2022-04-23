@@ -1,11 +1,25 @@
+# F17 - Exit
+
 def exit():
-    simpan = input('Apakah Anda mau melakukan penyimpanan file yang sudah diubah? (y/n) ')
+    # konfirmasi apakah pengguna ingin menyimpan perubahan atau tidak
+    # I.S. menerima masukan konfirmasi pengguna
+    # F.S. mengembalikan True jika pengguna hendak menyimpan data atau sebaliknya
 
-    while simpan not in ('y', 'Y', 'n', 'N'):
-        simpan = input('Apakah Anda mau melakukan penyimpanan file yang sudah diubah? (y/n) ')
+    # KAMUS LOKAL
+    # simpan : char
 
-    if simpan in ('y', 'Y'): return True
-    
-    return False
+    # ALGORITMA
+    # input konfirmasi
+    simpan = input('\nApakah Anda mau melakukan penyimpanan file yang sudah diubah? (y/n) ')
+
+    # validasi input
+    while not (simpan == 'Y' or simpan == 'y' or simpan == 'N' or simpan == 'n'):
+        simpan = input('\nApakah Anda mau melakukan penyimpanan file yang sudah diubah? (y/n) ')
+
+    # mengembalikan nilai boolean yang sesuai
+    if simpan == 'Y' or simpan == 'y': 
+        return True
+    else:
+        return False
     
     
