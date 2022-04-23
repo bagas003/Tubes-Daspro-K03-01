@@ -1,9 +1,15 @@
 import B01
 
 def login(data):
-  # Akses : user dan admin
-  # Menerima input data user lalu menghasilkan role dan user_id dari user tersebut jika 
-  # login berhasil, serta menghasilkan status apakah login berhasil
+  # Melakukan login untuk mengakses fitur-fitur yang terdapat pada program
+  # I.S. Pengguna belum login dan hanya dapat mengakses fitur login, help, dan exit
+  # F.S. Pengguna sudah login dan dapat mengakses semua fitur sesuai dengan role yang terdaftar
+
+  # KAMUS
+  # username, password : string
+  # data : array of User
+  # isAdmin : boolean
+
   username = input("Masukan username: ")
   password = input("Masukan password: ")
 

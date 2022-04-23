@@ -2,9 +2,16 @@ import argparse
 from tools import csv_to_array
 
 def load():
-  # Fungsi untuk memasukkan data CSV ke dalam program utama dalam bentuk sebuah matriks
-  # sehingga menghasilkan 4 matriks berupa data user, data game, data riwayat, dan data
-  # kepemilikan
+  # Memasukkan data CSV ke dalam program utama dalam bentuk sebuah matriks
+  # I.S. Terdapat 4 data csv yang tersimpan dalam sebuah folder
+  # F.S. Dihasilkan 4 matriks yang berisi keempat data csv tersebut
+
+  # KAMUS
+  # data_user : array of User
+  # data_game : array of Game
+  # data_riwayat : array of Riwayat
+  # data_kepemilikan : array of Kepemilikan
+
   parser = argparse.ArgumentParser()
   parser.add_argument("nama_folder", nargs='?', default=None)
   args = parser.parse_args()
