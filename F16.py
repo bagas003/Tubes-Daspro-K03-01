@@ -7,7 +7,7 @@ def save(user,game,riwayat,kepemilikan):
     # I.S. pengguna memasukkan input folder penyimpanan
     # F.S. menyimpan data pada folder input
 
-    # KAMUS
+    # KAMUS LOKAL
     # user : array of User
     # game : array of Game
     # riwayat : array of Riwayat
