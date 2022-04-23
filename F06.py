@@ -43,6 +43,6 @@ def ubah_stok(data_game):
             data_game[IX][5] = str(int(data_game[IX][5]) + input_jumlah)
             if (input_jumlah < 0):
                 print (f'Stok game {data_game[IX][1]} berhasil dikurangi. Stok sekarang: {data_game[IX][5]}')
-            elif (input_jumlah > 0):
+            else: # input_jumlah > 0
                 print (f'Stok game {data_game[IX][1]} berhasil ditambahkan. Stok sekarang: {data_game[IX][5]}')
     return data_game
